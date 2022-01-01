@@ -28,14 +28,15 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-# Make errors better looking
-gem 'better_errors', '~> 2.9'
-
 # Bulma css
 gem 'bulma-rails', '~> 0.9.2'
 
 # Simple form
 gem 'simple_form', '~> 5.1'
+
+# eventmachine
+gem 'eventmachine', '1.2.7'
+gem 'wdm', '>= 0.1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,7 +52,9 @@ group :development do
   # Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard', '~> 2.18'
   # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+  # Make errors better looking
+  gem 'better_errors', '~> 2.9'
 end
 
 group :test do
